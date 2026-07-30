@@ -17,7 +17,7 @@ suppressPackageStartupMessages({
 source("config.R")
 source("99_helpers.R")
 
-TOP_VAR <- 2000   # change to 500 if you want
+TOP_VAR <- 3000
 
 dds_int <- readRDS(CFG$dds_rds)
 dds_g   <- build_dds_g(dds_int)
@@ -77,5 +77,5 @@ g <- ggplot(df, aes(PC1, PC2, color=group)) +
 print(g)
 
 ## Optional manual save:
-# ggsave(file.path(CFG$figures_dir, "PCA_topVar2000.pdf"), g, width=7.5, height=6)
-# ggsave(file.path(CFG$figures_dir, "PCA_topVar2000.png"), g, width=7.5, height=6, dpi=300)
+# ggsave(file.path(CFG$figures_dir, "PCA_topVar3000.pdf"), g, width=7.5, height=6)
+# ggsave(file.path(CFG$figures_dir, "PCA_topVar3000.png"), g, width=7.5, height=6, dpi=300)
